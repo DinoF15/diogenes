@@ -1,0 +1,19 @@
+@import "@/styles/colours.module.scss";
+
+.header {
+  background-color: $primary;       // Dark background for header
+  color: $background;                // White text
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: $accent;                   // Lighter accent for subtitle
+}

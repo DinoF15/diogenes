@@ -1,0 +1,93 @@
+@import "./Colours.module.scss";
+
+.card {
+  background-color: $accent;        // e.g., #EFDCAB
+  border: 2px solid $secondary;     // e.g., #D98324
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: $primary;      // e.g., #443627
+  line-height: 1.4;
+  text-align: center;
+}
+
+.author {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: $primary;
+  font-weight: 600;
+  text-align: center;
+}
+
+.timestamp {
+  font-size: 0.875rem;
+  color: $secondary;    // e.g., #D98324
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* Comic strip section: Diogenes' square portrait and speech bubble */
+.comicSection {
+  display: flex;
+  align-items: center;     // Center portrait & bubble vertically
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.imageWrapper {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $secondary; // Outline the square
+  border-radius: 8px;           // Slight rounding on the corners
+}
+
+.diogenesImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         // Fill the square container
+}
+
+.speechBubble {
+  position: relative;
+  background-color: $background;  // White bubble
+  border: 2px solid $secondary;   // e.g., #D98324
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  max-width: 70%;
+  font-size: 1rem;
+  color: $secondary;
+  text-align: left;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;            // Adjust as needed
+    left: -12px;          // Arrow pointing left
+    border-width: 12px 12px 12px 0;
+    border-style: solid;
+    border-color: transparent $background transparent transparent;
+  }
+}
+
+.context {
+  margin: 0;
+  line-height: 1.4;
+}

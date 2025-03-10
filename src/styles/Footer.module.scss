@@ -1,0 +1,12 @@
+/* src/components/Footer.module.scss */
+@import "@/styles/colours.module.scss";
+
+.footer {
+  background-color: $highlight; /* same as main background */
+  color: $primary;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: auto; /* ensures footer is pushed to bottom if parent is flex */
+  border-top: 1px solid lighten($secondary, 40%);
+}
